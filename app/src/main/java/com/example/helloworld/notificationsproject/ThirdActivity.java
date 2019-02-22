@@ -1,0 +1,19 @@
+package com.example.helloworld.notificationsproject;
+
+import android.graphics.BitmapFactory;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+public class ThirdActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_third);
+
+        ImageView imageView = findViewById(R.id.imageView);
+        imageView.setImageBitmap( BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.image));
+    }
+}
