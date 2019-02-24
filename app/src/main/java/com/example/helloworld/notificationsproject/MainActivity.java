@@ -62,15 +62,29 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setSmallIcon(R.drawable.ic_stat_name)
                 .setContentIntent(pendingIntent)
+                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(),
+                        R.drawable.image))
                 .setStyle(new NotificationCompat.BigPictureStyle()
                         .bigPicture( BitmapFactory.decodeResource(this.getResources(),
-                                R.drawable.image)))
+                                R.drawable.image))
+                        .bigLargeIcon(null))
                 .addAction(R.drawable.ic_launcher_foreground , "View" , viewPendingIntent)
                 .setAutoCancel(false);
-
         notificationManager.notify(1, builder.build());
 
     }
 
 
 }
+
+// large image
+// .setStyle(new NotificationCompat.BigPictureStyle()
+//         .bigPicture( BitmapFactory.decodeResource(this.getResources(),
+//         R.drawable.image))
+//         .bigLargeIcon(null))
+//         .setAutoCancel(false);
+
+//large text
+// .setStyle(new NotificationCompat.BigTextStyle()
+//         .bigText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."))
+//         .setAutoCancel(false);
